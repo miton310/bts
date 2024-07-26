@@ -1,0 +1,84 @@
+.p-name {
+    &__kana {
+        display: block;
+    }
+}
+
+
+.accbox {
+	li {
+		display: block;
+		background: #FFF5C9;
+		margin-bottom: 1.2rem;
+		position: relative;
+		&::before {
+			content: "Q. ";
+			font-size: 2rem;
+			font-weight: 700;
+			color: #006F5D;
+			position: absolute;
+			left: 1.8rem;
+			top: 1.4rem;
+		}
+	}
+	.acctitle {
+		font-weight: bold;
+		font-size: 1.6rem;
+		padding: 2rem 6rem;
+		position: relative;
+		cursor: pointer;
+		color: #006F5D;
+		&::before, &::after {
+			content: "";
+			display: block;
+			width: 1.6rem;
+			height: 0.2rem;
+			border-radius: 0rem;
+			background: #0C0F1A;
+			position: absolute;
+			right: 2.2rem;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		&::after {
+			transform: translateY(-50%) rotate(90deg);
+      transition: 0.3s;
+		}
+		&.active::after {
+			transform: translateY(-50%) translate(0);
+		}
+	}
+	.accshow {
+		display: none;
+		font-size: 1.6rem;
+		padding: 0 6rem 2rem;
+		background: #FFF;
+	}
+}
+
+
+@media (max-width: 768px) {
+  .accbox {
+		li {
+			margin-bottom: 1.2rem;
+			&::before {
+				font-size: 1.8rem;
+				left: 1rem;
+				top: 1.2rem;
+			}
+		}
+		.acctitle {
+			padding: 1.2rem 3rem 1.2rem 3.5rem;
+			font-size:1.4rem;
+			&::before, &::after {
+				width: 1.4rem;
+				height: 0.3rem;
+				right: 1rem;
+			}
+		}
+		.accshow {
+			font-size: 1.4rem;
+			padding: 0 3.3rem 1.6rem;
+		}
+	}
+}

@@ -1,3 +1,10 @@
+@use './foundation/variable' as *;
+@use './foundation/common';
+@use './layout';
+@use './component';
+@use './project';
+
+
 header,footer,div,section,article,nav,a,p,span,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,img,dl,dt,dd,form,input,textarea{ box-sizing: border-box; }
 ::selection { background: #ddd; }
 ::-moz-selection { background: #ddd; }
@@ -35,10 +42,7 @@ h2{
     margin:-8rem 0 6rem;
 }
 
-.button-container {
-  display: flex;
-  justify-content: space-around;
-}
+
 .btn_0 {
   background-color: transparent;
   cursor: pointer;
@@ -223,23 +227,6 @@ h2{
     width: 62rem;
     margin:3rem auto 2rem;
 }
-footer{
-  background-color: #001128;
-  color: #fff;
- margin-top: 0px;
-  padding: 5.5rem 0;
-  font-size: 1.4rem;
-  text-align: center;
-}
-
-footer img{
-    width:360px;
-    margin:1rem auto 2rem;
-}
-
-footer a{
-    color: #fff;
-}
 
 a,a img{
   color: #777;
@@ -281,6 +268,7 @@ body{ font-size: 1.7em; }
   padding: 0 20px;
 	margin: 0 auto;
 }
+}
 
 @media (max-width: 1100px){
 
@@ -291,7 +279,7 @@ html{ font-size: 0.9vw; }
 }
 
 }
-}
+
 
 /*　SP */
 @media (max-width: 768px){
@@ -336,9 +324,7 @@ header img.logo{
 header h1 img{
   width: 100%;
 }
-.button-container {
-  display: block;
-}
+
 .button {
   display: inline-block; /* デフォルトのaタグの表示を変更 */
   border: none;
@@ -482,14 +468,6 @@ vertical-align: top;
   line-height: 1.6;
 }
 
-footer{
-  padding: 4rem 0rem 4rem;
-  font-size: 1.1rem;
-}
-footer a{
-    color: #fff;
-}
-
 .section-2{
   background: url(../images/star_sp.jpg) top center no-repeat;
   padding: 0rem 0 2rem;
@@ -536,77 +514,5 @@ footer a{
     animation: pulse 1s infinite;
 }
 }
-.accbox li {
-  display: block;
-  background: #F4F4F4;
-  border-radius: 0rem;
-  margin-bottom: 1.2rem;
-  position: relative;
-}
-.accbox li::before {
-  content: "Q. ";
-  font-size: 2rem;
-  font-weight: 700;
-  color: #0C0F1A;
-  position: absolute;
-  left: 1.8rem;
-  top: 1.4rem;
-}
-.accbox .acctitle {
-  font-weight: bold;
-  font-size: 1.6rem;
-  padding: 2rem 6rem;
-  position: relative;
-  cursor: pointer;
-}
-.accbox .acctitle::before, 
-.accbox .acctitle::after {
-  content: "";
-  display: block;
-  width: 1.6rem;
-  height: 0.2rem;
-  border-radius: 0rem;
-  background: #0C0F1A;
-  position: absolute;
-  right: 2.2rem;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.accbox .acctitle::after {
-  transform: translateY(-50%) rotate(90deg);
-  transition: 0.3s;
-}
-.accbox .accshow {
-  display: none;
-  font-size: 1.6rem;
-  padding: 0 6rem 2rem;
-}
-.accbox .acctitle.active::after {
-  transform: translateY(-50%) translate(0);
-}
-@media (max-width: 768px) {
-  .accbox li {
-    border-radius: 1rem;
-    margin-bottom: 1.2rem;
-  }
-  .accbox li::before {
-    font-size: 1.8rem;
-    left: 1rem;
-    top: 0.8rem;
-  }
-  .accbox .acctitle {
-    padding: 1.2rem 3rem 1.2rem 3.5rem;
-    font-size:1.4rem;
-  }
-  .accbox .acctitle::before, 
-  .accbox .acctitle::after {
-    width: 1.4rem;
-    height: 0.3rem;
-    right: 1rem;
-  }
-  .accbox .accshow {
-    font-size: 1.4rem;
-    padding: 0 3.3rem 1.6rem;
-  }
-}
+
 
