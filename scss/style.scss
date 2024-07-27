@@ -9,37 +9,19 @@ header,footer,div,section,article,nav,a,p,span,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,
 ::selection { background: #ddd; }
 ::-moz-selection { background: #ddd; }
 html,body{
-  font-family: "メイリオ", Meiryo, "Hiragino Sans", "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
-	font-weight: 400;
+	font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	color: #222222;
     background-color: #fff;
 	line-height: 1.9;
 }
-header{
-  background: url(../images/mv-bg.jpg) center center no-repeat;
-  background-size: cover;
-  padding: 0rem 0;
-  position: relative;
-}
-.header-content{
-  width: 100%;
-	max-width: 1240px;
-  padding: 0px 40px 10px;
-	margin: 0 auto;
-}
-header h1 img{
-  width: 100%;
-  margin: 0 auto;
-}
+
 h2{
     font-size:3rem;
     margin:6rem 0 2rem;
     font-weight: 700;
-}
-.top-cta{
-    margin:-8rem 0 6rem;
 }
 
 
@@ -61,9 +43,11 @@ h2{
   width: 95%;
   height: auto;
 }
+
+
 .infomation{
   background: #fff;
-  padding: 6rem 0 5rem;
+  padding: 0 0 5rem;
   position: relative;
   color:#000;
   font-size:1.6rem;
@@ -107,126 +91,11 @@ h2{
   margin-top:0rem;
 }
 
-.section-1 {
-  padding:6rem 0;
-  background: url(../images/section-1.jpg) center center no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-}
-.section-1 .box-1{
-  background-color: #fff;
-  padding: 0rem 0 7rem;
-  position: relative;
-}
-.section-1 h2 img{
-  margin-bottom: 6rem;
-}
-.section-1 .box-1 .inner{
-  padding: 0 8rem;
-}
-.section-1 .btn{
-    width:72rem;
-    margin:0 auto;
-    animation: pulse 1s infinite;
-}
-.guest {
-    padding:6rem 0;
-  background: url(../images/cta.jpg) center center no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
-.guest .box-1{
-  background-color: #fff;
-  padding: 0rem 0 7rem;
-  position: relative;
-}
-.guest h2 img{
-  margin-bottom: 6rem;
-}
-.guest .box-1 .inner{
-  padding: 0 8rem;
-}
-.guest .box-1 img.image{
-  margin: 5rem 0;
-}
-.guest .btn{
-    width: 62rem;
-    margin:1rem auto 2rem;
-}
-.guest ul{
-  display: flex;
-  justify-content: space-between;
-  margin-bottom:2rem;
-}
-.guest ul li{
-  display: block;
-  width: 45%;
-  border-radius: 1rem;
-  padding-bottom: 0rem;
-  font-size: 2rem;
-  line-height: 1.5;
-  font-weight: 700;
-  text-align: center;
-  position: relative;
-  cursor: pointer;
-}
-.guest .name{
-  color:#000;
-  font-size:2.4rem;
-  font-weight: bold;
-  margin-bottom:2rem;
-}
-.guest .name span small{
-  font-size:1.2rem;
-  }
-.guest .sub{
-  color:#555;
-  font-size:1.3rem;
-  margin-top:2rem;
-}
-.guest .profile{
-  font-size:1.5rem;
-  text-align: left;
-  font-weight: normal;
-  line-height: 1.8;
-}
 
 
-.section-2{
-  background: url(../images/star.jpg) center center no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  padding: 4rem 0rem;
-}
-.section-2 .box-1{
-  background-color: #fff;
-  padding: 6rem 0 7rem;
-  position: relative;
-}
-.section-2 h2 img{
-  margin-bottom: 6rem;
-}
-.section-2 .box-1 .inner{
-  padding: 0 8rem;
-}
-.section-2 .box-1 img.image{
-  margin: 5rem 0;
-}
 
-.video-section{
-  content: "";
-  display: block;
-  width: 100%;
-  background: url(../images/pics.jpg) center center no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  padding: 4rem 0rem;
-}
 
-.video-section .btn{
-    width: 62rem;
-    margin:3rem auto 2rem;
-}
+
 
 a,a img{
   color: #777;
@@ -262,12 +131,12 @@ strong{
 html{ font-size: 10px; }
 body{ font-size: 1.7em; }
 
-.content{
-  width: 100%;
-	max-width: 1000px;
-  padding: 0 20px;
-	margin: 0 auto;
-}
+.content {
+    width: 100%;
+    max-width: 1040px;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 1100px){
@@ -310,20 +179,7 @@ h2{
     border:4px solid #f2f2f2;
     line-height:1.5;
 }
-header{
-  background: url(../images/header-bg_sp.jpg) center center no-repeat;
- background-size: cover;
-  background-attachment: scroll;
-  padding: 18rem 0 2rem;
-}
-header img.logo{
-  width: 14.6rem;
-  left: 2rem;
-  top: 2rem;
-}
-header h1 img{
-  width: 100%;
-}
+
 
 .button {
   display: inline-block; /* デフォルトのaタグの表示を変更 */
@@ -407,112 +263,10 @@ vertical-align: top;
   margin-bottom:0rem;
 }
 
-.guest {
-    padding:2rem 0;
-  background: url(../images/pics_sp.jpg)  center center repeat-y;
-  background-attachment: scroll;
-  background-size: auto;
-}
-.guest .box-1{
-  background-color: #fff;
-  padding: 2rem 0 3rem;
-  position: relative;
-}
-.guest h2 img{
-  margin-bottom: 1rem;
-}
-.guest .box-1 .inner{
-  padding: 0 1.8rem;
-}
-.guest .box-1 img.image{
-  margin: 5rem 0;
-}
-.guest .btn{
-    width: 95%;
-    margin:1rem auto 0rem;
-}
 
-.guest ul{
-  display: flex;
-  justify-content: space-between;
-  margin-bottom:2rem;
-}
-.guest ul li{
-  display: block;
-  width: 48%;
-  border-radius: 1rem;
-  padding-bottom: 0rem;
-  font-size: 2rem;
-  line-height: 1.5;
-  font-weight: 700;
-  text-align: center;
-  position: relative;
-  cursor: pointer;
-}
-.guest .name{
-  color:#000;
-  font-size:1.6rem;
-  font-weight: bold;
-  margin-bottom:2rem;
-}
-.guest .sub{
-  color:#555;
-  font-size:0.8rem;
-  margin-top:2rem;
-}
 
-.guest .profile{
-  font-size:1.1rem;
-  text-align: left;
-  font-weight: normal;
-  line-height: 1.6;
-}
 
-.section-2{
-  background: url(../images/star_sp.jpg) top center no-repeat;
-  padding: 0rem 0 2rem;
- background-size: cover;
-  background-attachment: scroll;
-}
-.section-2 .box-1{
-  padding: 1rem 0 0rem;
-}
-.section-2 .box-1 .inner{
-  padding: 0 1.8rem;
-}
-.video-section{
-  background: url(../images/pics_sp.jpg) top center repeat-x;
-  padding: 2rem 0 4rem;
- background-size: cover;
-  background-attachment: scroll;
-}
-.video-section .btn{
-    width: 99%;
-    margin:2rem auto 1rem;
-}
 
-.section-1 {
-    padding:2rem 0;
-  background: url(../images/section-1.jpg) center center no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-}
-.section-1 .box-1{
-  background-color: #fff;
-  padding: 0rem 0 3rem;
-  position: relative;
-}
-.section-1 h2 img{
-  margin-bottom: 6rem;
-}
-.section-1 .box-1 .inner{
-  padding: 0 1.8rem;
-}
-.section-1 .btn{
-    width: 98%;
-    margin:0 auto;
-    animation: pulse 1s infinite;
-}
 }
 
 

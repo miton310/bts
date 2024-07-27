@@ -3,9 +3,49 @@
 }
 
 .c-button-container {
-	display: flex;
-	justify-content: space-around;
-	@media (max-width: 768px){
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	gap: 1.75rem;
+	padding-bottom: 3rem;
+	
+	&--top {
+		margin-left: auto;
+		margin-right: auto;
+		width: 80%;
+		max-width: 450px;
 		display: block;
+	}
+	@media (min-width: 769px){
+		display: flex;
+		justify-content: space-around;
+		padding-top: 4rem;
+		padding-bottom: 8rem;
+	}
+}
+
+.c-video-section{
+  content: "";
+  display: block;
+  width: 100%;
+  background: url(../images/pics.jpg) center center no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 4rem 0rem;
+	.btn{
+    width: 62rem;
+    margin:3rem auto 2rem;
+	}
+
+	@media (max-width: 768px){
+		.video-section{
+			background: url(../images/pics_sp.jpg) top center repeat-x;
+			padding: 2rem 0 4rem;
+		 background-size: cover;
+			background-attachment: scroll;
+			.btn{
+				width: 99%;
+				margin:2rem auto 1rem;
+			}
+		}
 	}
 }
