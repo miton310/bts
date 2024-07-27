@@ -1,0 +1,1 @@
+{"version":3,"sources":["layout.scss"],"names":[],"mappings":"AAAA,iBACI,YAAA,CACA,mCACI,eAAA","file":"../layout.css","sourcesContent":[".l-speaker__list {\r\n    display: grid;\r\n    figure:last-child {\r\n        grid-column: 2 / 1;\r\n    }\r\n}"]}

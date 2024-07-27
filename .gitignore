@@ -1,0 +1,5 @@
+/node_modules
+/.vscode
+yarn.lock
+.DS_Store
+/images/olg
