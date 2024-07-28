@@ -255,6 +255,11 @@ header h1 img {
   display: block;
   margin-bottom: 2rem;
 }
+.section-4__button {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+}
 @media screen and (min-width: 769px) {
   .section-4__button {
     display: block;
@@ -566,17 +571,60 @@ header h1 img {
   margin-right: auto;
 }
 .p-information__wrap .content {
-  max-width: 100%;
-  background-color: #F2F2F2;
+  padding: 0;
 }
-.p-information__wrap .inner {
-  max-width: 1040px;
-  padding: 0 20px 0;
-  margin-left: auto;
-  margin-right: auto;
+.p-information__text {
+  padding: 0 2.4%;
+}
+@media screen and (min-width: 769px) {
+  .p-information__wrap .content {
+    max-width: 100%;
+    background-color: #F2F2F2;
+  }
+  .p-information__wrap .inner {
+    max-width: 1040px;
+    padding: 0 20px 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .p-information__wrap iframe {
+    height: 100%;
+  }
+  .p-information__text {
+    padding: 4rem 0 4rem;
+  }
 }
 
-header, footer, div, section, article, nav, a, p, span, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, img, dl, dt, dd, form, input, textarea {
+header,
+footer,
+div,
+section,
+article,
+nav,
+a,
+p,
+span,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+img,
+dl,
+dt,
+dd,
+form,
+input,
+textarea {
   box-sizing: border-box;
 }
 
@@ -592,7 +640,8 @@ header, footer, div, section, article, nav, a, p, span, ul, ol, li, dl, dt, dd, 
   background: #ddd;
 }
 
-html, body {
+html,
+body {
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
@@ -682,7 +731,8 @@ h2 {
   margin-top: 0rem;
 }
 
-a, a img {
+a,
+a img {
   color: #777;
   transition: 0.3s;
   text-decoration: none;
@@ -693,7 +743,8 @@ a, a img {
   -webkit-touch-callout: none; /* Disable Android and iOS callouts*/
 }
 
-a:hover, a:hover img {
+a:hover,
+a:hover img {
   opacity: 0.7;
   cursor: pointer;
 }

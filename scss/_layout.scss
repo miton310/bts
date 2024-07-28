@@ -60,10 +60,12 @@ header h1 img{
 	padding: 5.5rem 0;
 	font-size: 1.4rem;
 	text-align: center;
+	margin-top: 8rem;
 
 	@media (max-width: 768px){
 		padding: 4rem 0rem;
 		font-size: 1.1rem;
+		margin-top: 4rem;
 	}
 }
 
@@ -110,6 +112,16 @@ header h1 img{
 }
 
 // section
+.section .content,
+.guest .content {
+	// padding: 2.5rem 0;
+	filter: drop-shadow(2px 2px 1px rgba(0,0,0,.5));
+	@media screen and (min-width: 769px){
+		padding: 2.5rem 0;
+		filter: drop-shadow(3px 3px 3px rgba(0,0,0,.35));
+	}
+}
+
 .section h2 img {
 	margin-bottom: 6rem;
 }
@@ -131,10 +143,16 @@ header h1 img{
   // background-attachment: fixed;
   padding: 4rem 0rem;
 
-	&__list {
+	&__list:not(:last-child) {
+		margin: 1rem 0 4rem;
+	}
+
+	&__item {
 		font-weight: bold;
 		line-height: 2;
-		margin: 1rem 0 4rem;
+		text-indent: -1em;
+		padding-left: 1em;
+		letter-spacing: -0.05em;
 		&:last-child {
 			margin: 0;
 		}
@@ -144,6 +162,8 @@ header h1 img{
 		margin-bottom: 2rem;
 	}
 }
+
+
 .section-2 {
   background: url(../images/bg_section2_sp.jpg) center center no-repeat;
   background-size: cover;
@@ -163,9 +183,11 @@ header h1 img{
 		background: url(../images/bg_section2.jpg) center center no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    padding: 4rem 0rem;		
+    padding: 10rem 0rem;		
 	}
 }
+
+
 .section-3 {
 	.section-3__picture {
 		margin-bottom: 2rem;
@@ -176,18 +198,20 @@ header h1 img{
 }
 
 @media (max-width: 768px) {
-	.section .box-1{
-		padding: 2.5rem 0;
-		filter: drop-shadow(2px 2px 1px rgba(0,0,0,.5));
-	}
-	.section .box-1 .inner {
-		padding: 0 1.8rem;
+	.section {
+		.box-1 {
+			padding-top: 3rem;
+			padding-bottom: 3rem;
+			.inner {
+				padding: 0 1.8rem;
+			}
+		}
 	}
 	.section-1{
-		background: url(../images/bg_green-stripe.jpg) top center no-repeat;
+		// background: url(../images/bg_green-stripe.jpg) top center no-repeat;
+		// background-size: cover;
+		// background-attachment: scroll;
 		padding: 0rem 0 2rem;
-		background-size: cover;
-		background-attachment: scroll;
 	}
 	
 	.section-2{
@@ -206,12 +230,15 @@ header h1 img{
 	background-color:#DDEB68;
 	&__img {
 		padding: 4rem 0 6rem;
+		.section-3 & {
+			padding-bottom: 2rem;
+		}
 	}
 
 	@media screen and (min-width: 769px){
 		&__img {
 			padding: 4rem 20px 6rem;
-			width: 100%;
+			// width: 100%;
 			max-width: 1040px;
 			margin: 0 auto;
 		}
@@ -219,6 +246,9 @@ header h1 img{
 	}
 }
 
+/* =============================
+section 4
+============================= */
 .section-4 {
 	.l-box {
 		width: 80%;
@@ -241,10 +271,19 @@ header h1 img{
 		}
 	}
 
+	.section-ticket__img {
+		max-width: 800px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
 	&__button {
 		display: grid;
 		grid-template-columns: repeat(1, 1fr);
 		gap: 1rem;
+		img {
+			filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+		}
 	}
 
 	@media screen and (min-width:769px) {
@@ -258,6 +297,9 @@ header h1 img{
 	}
 }
 
+/* =============================
+speaker
+============================= */
 .l-speaker__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -283,20 +325,29 @@ header h1 img{
 		}
 }
 
-// gest
+// guest
 .guest {
-	padding:6rem 0;
-background: url(../images/cta.jpg) center center no-repeat;
-background-attachment: fixed;
-background-size: cover;
+	padding: 10rem 0;
+	background: url(../images/bg_gray.jpg) center center no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	@media screen and (max-width: 768px){
+		padding: 4rem 0;
+		background: url(../images/bg_gray_tate.jpg)  center center repeat-y;
+		background-attachment: scroll;
+		background-size: auto;
+	}
+
 p {
-	text-align:justify;
-	margin-bottom: 4rem;
-}
+		text-align:justify;
+		&:not(:last-child) {
+			margin-bottom: 8rem;
+		}
+	}
 }
 .guest .box-1{
 background-color: #fff;
-padding: 0rem 0 7rem;
+padding: 4rem 0 6rem;
 position: relative;
 }
 .guest h2 img{
@@ -351,16 +402,10 @@ line-height: 1.8;
 }
 
 @media screen and (max-width: 768px){
-.guest {
-	padding:2rem 0;
-	background: url(../images/bg_gray_tate.jpg)  center center repeat-y;
-	background-attachment: scroll;
-	background-size: auto;
-}
 .guest .box-1{
-background-color: #fff;
-padding: 2rem 0 3rem;
-position: relative;
+	background-color: #fff;
+	padding: 4rem 0 5rem;
+	position: relative;
 }
 .guest h2 img{
 margin-bottom: 1rem;
@@ -411,7 +456,4 @@ text-align: left;
 font-weight: normal;
 line-height: 1.6;
 }
-}
-
-@media screen and (min-width: 769px){
 }

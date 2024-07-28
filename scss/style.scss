@@ -1,35 +1,68 @@
-@use './foundation/variable' as *;
-@use './foundation/common';
-@use './layout';
-@use './component';
-@use './project';
+@use "./foundation/variable" as *;
+@use "./foundation/common";
+@use "./layout";
+@use "./component";
+@use "./project";
+@use "./utility";
 
-
-header,footer,div,section,article,nav,a,p,span,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,img,dl,dt,dd,form,input,textarea{ box-sizing: border-box; }
-::selection { background: #ddd; }
-::-moz-selection { background: #ddd; }
-html,body{
-	font-family: 'Noto Sans JP', sans-serif;
+header,
+footer,
+div,
+section,
+article,
+nav,
+a,
+p,
+span,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+img,
+dl,
+dt,
+dd,
+form,
+input,
+textarea {
+  box-sizing: border-box;
+}
+::selection {
+  background: #ddd;
+}
+::-moz-selection {
+  background: #ddd;
+}
+html,
+body {
+  font-family: "Noto Sans JP", sans-serif;
   font-weight: 400;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	color: #222222;
-    background-color: #fff;
-	line-height: 1.9;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #222222;
+  background-color: #fff;
+  line-height: 1.9;
 }
 
-h2{
-    font-size:3rem;
-    margin:6rem 0 2rem;
-    font-weight: 700;
+h2 {
+  font-size: 3rem;
+  margin: 6rem 0 2rem;
+  font-weight: 700;
 }
-
 
 .btn_0 {
   background-color: transparent;
   cursor: pointer;
   padding: 0 0 0 1.5rem;
-  width:60rem;
+  width: 60rem;
 }
 .button {
   display: inline-block;
@@ -44,24 +77,23 @@ h2{
   height: auto;
 }
 
-
-.infomation{
+.infomation {
   background: #fff;
   padding: 0 0 5rem;
   position: relative;
-  color:#000;
-  font-size:1.6rem;
+  color: #000;
+  font-size: 1.6rem;
 }
-.infomation h2 img{
+.infomation h2 img {
   width: 72.8rem;
   margin: 0 auto 5rem;
 }
-.infomation ul{
+.infomation ul {
   display: flex;
   justify-content: space-between;
-  margin-bottom:2rem;
+  margin-bottom: 2rem;
 }
-.infomation ul li{
+.infomation ul li {
   display: block;
   width: 33%;
   border-radius: 1rem;
@@ -73,31 +105,26 @@ h2{
   position: relative;
   /* cursor: pointer; */
 }
-.infomation .name{
-  color:#000;
-  font-size:2rem;
+.infomation .name {
+  color: #000;
+  font-size: 2rem;
   font-weight: bold;
-  margin:2rem 0 1rem;
+  margin: 2rem 0 1rem;
 }
-.infomation .name span{
-  font-size:2rem;
-  }
-.infomation .name span small{
-  font-size:1.2rem;
-  }
-.infomation .sub{
-  color:#555;
-  font-size:1.8rem;
-  margin-top:0rem;
+.infomation .name span {
+  font-size: 2rem;
+}
+.infomation .name span small {
+  font-size: 1.2rem;
+}
+.infomation .sub {
+  color: #555;
+  font-size: 1.8rem;
+  margin-top: 0rem;
 }
 
-
-
-
-
-
-
-a,a img{
+a,
+a img {
   color: #777;
   transition: 0.3s;
   text-decoration: none;
@@ -107,31 +134,46 @@ a,a img{
   -webkit-user-select: none; /* Chrome, Safari, and Opera */
   -webkit-touch-callout: none; /* Disable Android and iOS callouts*/
 }
-a:hover,a:hover img{ opacity: 0.7;cursor: pointer; }
-img{max-width: 100%;display: block;}
-.mark{background: #fff000;}
-small{
-    font-size:85%;
-    line-height: 0.1;
+a:hover,
+a:hover img {
+  opacity: 0.7;
+  cursor: pointer;
 }
-strong{
-    font-size:130%;
+img {
+  max-width: 100%;
+  display: block;
 }
-.box{
-    background:#f7f7f7;
-    padding:2rem;
-    margin:3rem 0;
-    border:1px solid #f2f2f2;
+.mark {
+  background: #fff000;
+}
+small {
+  font-size: 85%;
+  line-height: 0.1;
+}
+strong {
+  font-size: 130%;
+}
+.box {
+  background: #f7f7f7;
+  padding: 2rem;
+  margin: 3rem 0;
+  border: 1px solid #f2f2f2;
 }
 
 /*　PC */
-@media (min-width: 769px){
-.sp{ display: none !important; }
+@media (min-width: 769px) {
+  .sp {
+    display: none !important;
+  }
 
-html{ font-size: 10px; }
-body{ font-size: 1.7em; }
+  html {
+    font-size: 10px;
+  }
+  body {
+    font-size: 1.7em;
+  }
 
-.content {
+  .content {
     width: 100%;
     max-width: 1040px;
     padding: 0 20px;
@@ -139,134 +181,132 @@ body{ font-size: 1.7em; }
   }
 }
 
-@media (max-width: 1100px){
+@media (max-width: 1100px) {
+  html {
+    font-size: 0.9vw;
+  }
 
-html{ font-size: 0.9vw; }
-
-.content{
-  padding: 0 4.54%;
+  .content {
+    padding: 0 4.54%;
+  }
 }
-
-}
-
 
 /*　SP */
-@media (max-width: 768px){
-.pc{ display: none !important; }
+@media (max-width: 768px) {
+  .pc {
+    display: none !important;
+  }
 
-html{ font-size: 2.6vw; }
-body{ font-size: 1.5em; line-height:1.8; }
+  html {
+    font-size: 2.6vw;
+  }
+  body {
+    font-size: 1.5em;
+    line-height: 1.8;
+  }
 
-.content{
-	width: 100%;
-	padding: 0 2.4%;
-}
-strong{
-    font-size:120%;
+  .content {
+    width: 100%;
+    padding: 0 2.4%;
+  }
+  strong {
+    font-size: 120%;
     line-height: 1.2;
-}
+  }
 
-h2{
-    font-size:1.7rem;
-    margin:3rem 0 2rem;
+  h2 {
+    font-size: 1.7rem;
+    margin: 3rem 0 2rem;
     font-weight: 700;
-}
-
-.box{
-    background:#f7f7f7;
-    padding:1.5rem;
-    margin:1rem 0;
-    border:4px solid #f2f2f2;
-    line-height:1.5;
-}
-
-
-.button {
-  display: inline-block; /* デフォルトのaタグの表示を変更 */
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  padding: 0 0 0 1.5rem;
-  text-decoration: none; /* リンクの下線を消去 */
-}
-
-.button img {
-  width: 95%; /* 画像の幅を設定します */
-  height: auto; /* 画像の高さを自動調整します */
-}
-.cta{
-  background: url(../images/cta-bg.jpg) center center no-repeat;
-  background-size: cover;
-  padding: 3rem 0 2rem;
-}
-.cta h2{
-  font-size: 2rem;
-  margin-bottom: 2rem;
-}
-.cta p{
-  font-size: 1.4rem;
-  text-align: left;
-}
-.cta h2::before,
-.cta h2::after{
-  width: 2.8rem;
-  height: 2.4rem;
-  top: 1.1em;
-}
-.cta h2::before{
-  left: -4.2rem;
-}
-.cta h2::after{
-  right: -4.2rem;
-}
-.cta input[type=text]{
-  width: 100%;
-  line-height: 6rem;
-  font-size: 1.5rem;
-  margin: 1.5rem auto 1rem;
-}
-.infomation{
-  padding: 3rem 0 1rem;
-  font-size:1.3rem;
-}
-.infomation ul{
-  display: block;
-}
-.infomation ul li{
-display: inline-block;
-vertical-align: top;
-  width: 49.2%;
-  margin-bottom: 0rem;
-  padding-bottom: 1rem;
-  padding:0.5rem;
-  font-size: 1.6rem;
-}
-.infomation ul li img.image{
-  margin-bottom: 1.5rem;
-}
-.infomation .name{
-  color:#000;
-  font-size:1.5rem;
-  font-weight: bold;
-  margin-bottom:1rem;
-}
-.infomation .name span{
-  font-size:2rem;
   }
-.infomation .name span small{
-  font-size:1.2rem;
+
+  .box {
+    background: #f7f7f7;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border: 4px solid #f2f2f2;
+    line-height: 1.5;
   }
-.infomation .sub{
-  color:#555;
-  font-size:1.2rem;
-  margin-top:0rem;
-  margin-bottom:0rem;
+
+  .button {
+    display: inline-block; /* デフォルトのaタグの表示を変更 */
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0 0 0 1.5rem;
+    text-decoration: none; /* リンクの下線を消去 */
+  }
+
+  .button img {
+    width: 95%; /* 画像の幅を設定します */
+    height: auto; /* 画像の高さを自動調整します */
+  }
+  .cta {
+    background: url(../images/cta-bg.jpg) center center no-repeat;
+    background-size: cover;
+    padding: 3rem 0 2rem;
+  }
+  .cta h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  .cta p {
+    font-size: 1.4rem;
+    text-align: left;
+  }
+  .cta h2::before,
+  .cta h2::after {
+    width: 2.8rem;
+    height: 2.4rem;
+    top: 1.1em;
+  }
+  .cta h2::before {
+    left: -4.2rem;
+  }
+  .cta h2::after {
+    right: -4.2rem;
+  }
+  .cta input[type="text"] {
+    width: 100%;
+    line-height: 6rem;
+    font-size: 1.5rem;
+    margin: 1.5rem auto 1rem;
+  }
+  .infomation {
+    padding: 3rem 0 1rem;
+    font-size: 1.3rem;
+  }
+  .infomation ul {
+    display: block;
+  }
+  .infomation ul li {
+    display: inline-block;
+    vertical-align: top;
+    width: 49.2%;
+    margin-bottom: 0rem;
+    padding-bottom: 1rem;
+    padding: 0.5rem;
+    font-size: 1.6rem;
+  }
+  .infomation ul li img.image {
+    margin-bottom: 1.5rem;
+  }
+  .infomation .name {
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  .infomation .name span {
+    font-size: 2rem;
+  }
+  .infomation .name span small {
+    font-size: 1.2rem;
+  }
+  .infomation .sub {
+    color: #555;
+    font-size: 1.2rem;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+  }
 }
-
-
-
-
-
-}
-
-
