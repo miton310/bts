@@ -1,5 +1,9 @@
 .c-youtube__wrap {
     aspect-ratio: 16/9;
+		margin-bottom: 2.5rem;
+		@media screen and (min-width: 769px){
+			margin-bottom: 0;			
+		}
 }
 
 .c-button-container {
