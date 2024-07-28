@@ -287,6 +287,12 @@ section 4
 	}
 
 	@media screen and (min-width:769px) {
+		.l-box {
+			width: 100%;
+			padding: 0 40px;
+			margin-top: -2rem;
+			max-width: 1240px;
+		}
 		&__button {
 			display: block;
 		}
