@@ -5,3 +5,22 @@
 .mb-half {
   margin-bottom: 0.5rem!important;
 }
+
+.u-mb7__pc {
+  @media screen and (min-width: 769px) {
+    margin-bottom: 7rem;
+  }
+}
+
+.u-mb4__pc {
+  margin-bottom: 2.4rem;
+  @media screen and (min-width: 769px) {
+    margin-bottom: 4rem;
+  }
+}
+
+.u-left__pc {
+  @media screen and (min-width: 769px) {
+    text-align: left;    
+  }
+}
