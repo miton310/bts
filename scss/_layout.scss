@@ -7,13 +7,13 @@
 }
 .header-content{
   width: 104vw;
-	max-width: 1240px;
+	max-width: 2500px;
   padding: 0;
 	margin: 0 -2vw 0;
 	&.hero {
 		width: 116vw;
 		margin: 0 -8vw 0;
-		max-width: 1500px;
+		max-width: 2500px;
 	}
 }
 header h1 img{
@@ -43,9 +43,10 @@ header h1 img{
 		width: 100%;
 	}
 }
-@media screen and (min-width:1240px) {
+@media screen and (min-width:2000px) {
 	.header-content{
-		margin: 0 auto;
+			width: 100vw;
+			margin: 0 auto;
 		&.hero {
 			width: 100vw;
 			margin: 0 auto 0;
@@ -53,22 +54,34 @@ header h1 img{
 	}
 }
 
+
+/* ============================================
+footer
+ ============================================ */
 .l-footer{
+	font-family: 'Noto Serif JP', serif;
 	background-color: #0EA456;
 	color: #fff;
 	margin-top: 0px;
-	padding: 5.5rem 0;
-	font-size: 1.4rem;
+	padding: 4rem 0;
+	font-size: 1rem;
+	font-weight: bold;
 	text-align: center;
 	margin-top: 8rem;
+	font-size: 1.4rem;
+	letter-spacing: .1em;
 
 	@media (max-width: 768px){
 		padding: 4rem 0rem;
-		font-size: 1.1rem;
+		font-size: 1rem;
 		margin-top: 4rem;
 	}
 }
 
+
+/* ============================================
+box
+ ============================================ */
 .l-box {
 	&__bg-green {
 		background: url(../images/bg_green-stripe_yoko.png) top center no-repeat;
@@ -83,21 +96,24 @@ header h1 img{
 			background: url(../images/bg_green-stripe.jpg) center center no-repeat;
 			background-attachment: fixed;
 			background-size: cover;
-			padding: 4rem 0;
+			padding: 3.6rem 0 5rem;
 		}
 	}
 	&__youtube {
 		.ttl {
-			width: 83%;
+			width: 80%;
 			max-width: 800px;
 			margin-left: auto;
 			margin-right: auto;
-			margin-bottom: 2rem;
+			margin-bottom: 3rem;
 			display: block;
+			@media screen and (min-width:769px) {
+				margin-bottom: 2rem;
+			}
 		}
 
 		.button {
-			margin-bottom: 2rem;
+			margin-bottom: 5rem;
 		}
 
 		.content {
@@ -105,7 +121,7 @@ header h1 img{
 		}
 		@media screen and (min-width: 769px){
 			.button {
-				margin-bottom: 5rem;
+				margin-bottom: 7rem;
 			}
 		}
 	}
@@ -117,7 +133,7 @@ header h1 img{
 	// padding: 2.5rem 0;
 	filter: drop-shadow(2px 2px 1px rgba(0,0,0,.5));
 	@media screen and (min-width: 769px){
-		padding: 2.5rem 0;
+		padding: 2.5rem 20px;
 		filter: drop-shadow(3px 3px 3px rgba(0,0,0,.35));
 	}
 }
@@ -125,26 +141,58 @@ header h1 img{
 .section h2 img {
 	margin-bottom: 6rem;
 }
-.section .box-1 .inner {
-	padding: 0 8rem;
+.section .box-1{
+	background-color: #fff;
+	padding: 7rem 0 9rem;
+	position: relative;
 }
+.section .box-1 .inner {
+	padding: 0 10rem;
+}
+
+// SP用!!
+@media (max-width: 768px) {
+	.section {
+		.box-1 {
+			padding-top: 3rem;
+			padding-bottom: 3rem;
+			.inner {
+				padding: 0 7.1%;
+			}
+		}
+	}
+}
+
 .section .box-1 img.image {
 	margin: 5rem 0;
 }
-.section .box-1{
-	background-color: #fff;
-	padding: 6rem 0 7rem;
-	position: relative;
-}
 
+/* ============================================
+section 1
+ ============================================ */
 .section-1 {
   // background: url(../images/star.jpg) center center no-repeat;
   // background-size: cover;
   // background-attachment: fixed;
-  padding: 4rem 0rem;
+	padding: 4rem 0rem;
+	font-size: 1.2rem;
 
-	&__list:not(:last-child) {
-		margin: 1rem 0 4rem;
+	@media screen and (min-width:769px) {
+		font-size: 20px;
+	}
+
+	&__list {
+		font-size: 1.4rem;
+		&:not(:last-child) {
+			margin: 1rem 0 3.6rem;
+		}
+
+		@media screen and (min-width:769px) {
+			font-size: 24px;
+			&:not(:last-child) {
+				margin: 2rem 0 6.4rem;
+			}
+		}
 	}
 
 	&__item {
@@ -159,35 +207,68 @@ header h1 img{
 	}
 
 	img {
-		margin-bottom: 2rem;
+		margin-bottom: .7rem;
+		@media screen and (min-width:769px) {
+			margin-bottom: 2.1rem;
+		}
 	}
 }
 
-
+/* ===================================
+section 2
+=================================== */
 .section-2 {
   background: url(../images/bg_section2_sp.jpg) center center no-repeat;
   background-size: cover;
   background-attachment: fixed;
   padding: 4rem 0rem;
 
+	font-size: 1.4rem;
+
 	&__ttl {
 		max-width: 424px;
 		display: block;
-		margin: 46px auto 1.5rem;
+		margin: 46px auto 2.4rem;
 		@media screen and (min-width:769px) {
 			margin-top: 100px;
 			margin-bottom: 3.5rem;			
 		}
 	}
+	&__text {
+		margin-bottom: 3.7rem;
+
+		.mark {
+			font-size: 2rem;
+		}
+	}
+
 	@media screen and (min-width:769px) {
 		background: url(../images/bg_section2.jpg) center center no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    padding: 10rem 0rem;		
+    padding: 13rem 0rem;	
+		
+		font-size: 2rem;
+		
+		&__text {
+			margin-bottom: 3rem;
+	
+			.mark {
+				font-size: 2.4rem;
+				padding: 0 5rem;
+			}
+		}
+
+		&__ttl {
+      margin-bottom: 5.4rem;      
+    }
 	}
 }
 
 
+/* =============================
+section 3
+============================= */
 .section-3 {
 	.section-3__picture {
 		margin-bottom: 2rem;
@@ -195,18 +276,14 @@ header h1 img{
 	.box-1 {
 		margin-bottom: 4rem;
 	}
+	@media screen and (min-width: 769px){
+		.section-3__picture {
+			margin-bottom: 4rem;
+		}	
+	}
 }
 
 @media (max-width: 768px) {
-	.section {
-		.box-1 {
-			padding-top: 3rem;
-			padding-bottom: 3rem;
-			.inner {
-				padding: 0 1.8rem;
-			}
-		}
-	}
 	.section-1{
 		// background: url(../images/bg_green-stripe.jpg) top center no-repeat;
 		// background-size: cover;
@@ -222,6 +299,11 @@ header h1 img{
 	}
 }
 
+
+
+/* =============================
+section ticket
+============================= */
 .section-ticket {
 	background-image: url(../images/bg_section-3__head.jpg) !important;
 	background-position: top left;
@@ -229,18 +311,46 @@ header h1 img{
 	background-size: contain;
 	background-color:#DDEB68;
 	&__img {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: calc(310% / 375 * 100);
 		padding: 4rem 0 6rem;
 		.section-3 & {
+			padding-top: 3rem;
 			padding-bottom: 2rem;
+		}
+	}
+
+	&__btn {
+		display: flex;
+		gap: 2rem;
+		max-width: 1000px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 3rem;
+
+		.section-3 & {
+			width: 95%;
+			gap: 1rem;
+			margin-left: auto;
+			margin-right: auto;
+			@media screen and (min-width: 769px){
+				width: 100%;
+				gap: 2rem;
+			}
 		}
 	}
 
 	@media screen and (min-width: 769px){
 		&__img {
-			padding: 4rem 20px 6rem;
+			padding: 7rem 20px 6rem;
 			// width: 100%;
-			max-width: 1040px;
+			max-width: 800px;
 			margin: 0 auto;
+			.section-3 & {
+				padding-top: 6rem;
+			}
 		}
 		
 	}
@@ -267,7 +377,7 @@ section 4
 
 		a {
 			display: block;
-			margin-bottom: 2rem;
+			// margin-bottom: 2rem;
 		}
 	}
 
@@ -280,10 +390,15 @@ section 4
 	&__button {
 		display: grid;
 		grid-template-columns: repeat(1, 1fr);
-		gap: 1rem;
+		gap: 1.6rem;
 		img {
-			filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+			filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 1));
 		}
+	}
+
+	.c-button-container {
+		row-gap: 3.2rem;
+		padding-bottom: 6rem;
 	}
 
 	@media screen and (min-width:769px) {
@@ -299,9 +414,24 @@ section 4
 		.c-button-container {
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
+			margin-bottom: 0;
+			width: 97%;
+			margin-left: auto;
+			margin-right: auto;
+			padding-bottom: 10rem;
+			&.--section-4-top {
+				padding-bottom: 5rem;
+			}
 		}
 	}
 }
+
+@media screen and (min-width:769px) {
+.section-4 .section-ticket__img {
+	padding-bottom: 4rem;
+}
+}
+
 
 /* =============================
 speaker
@@ -310,8 +440,9 @@ speaker
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     text-align: center;
-    gap: 2rem;
-		margin-bottom: 2.75rem;
+    column-gap: 12%;
+		row-gap: 1.8rem;
+		margin-bottom: 4.4rem;
 
     figure {
         margin-bottom: .5rem;
@@ -319,8 +450,9 @@ speaker
 
 		@media screen and (min-width: 769px){
 			grid-template-columns: repeat(6, 1fr);
-			gap: 2.5rem;
-			margin-bottom: 9rem;
+			column-gap: 8%;
+			row-gap: 4rem;
+			margin-bottom: 14rem;
 
 			figure {
 				grid-column: span 2;
@@ -331,36 +463,49 @@ speaker
 		}
 }
 
-// guest
+/* =============================
+guest
+============================= */
 .guest {
 	padding: 10rem 0;
 	background: url(../images/bg_gray.jpg) center center no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
 	@media screen and (max-width: 768px){
-		padding: 4rem 0;
+		padding: 4rem 0 6rem;
 		background: url(../images/bg_gray_tate.jpg)  center center repeat-y;
 		background-attachment: scroll;
 		background-size: auto;
 	}
 
 p {
+		font-size: 1.4rem;
 		text-align:justify;
 		&:not(:last-child) {
 			margin-bottom: 8rem;
+		}
+
+		@media screen and (min-width: 769px){
+			font-size: 1.6rem;
+			letter-spacing: .48px;
+			line-height: 2;
+			&:not(:last-child) {
+				margin-bottom: 10rem;
+			}
+			
 		}
 	}
 }
 .guest .box-1{
 background-color: #fff;
-padding: 4rem 0 6rem;
+padding: 6rem 0 6rem;
 position: relative;
 }
 .guest h2 img{
 margin-bottom: 6rem;
 }
 .guest .box-1 .inner{
-padding: 0 8rem;
+padding: 0 10rem;
 }
 .guest .box-1 img.image{
 margin: 5rem 0;
@@ -407,6 +552,16 @@ font-weight: normal;
 line-height: 1.8;
 }
 
+.guest {
+	&__fig {
+		margin-bottom: 2rem;
+	@media screen and (min-width: 769px){
+		margin-bottom: 3rem;
+	}
+	}
+}
+
+// SP用!!
 @media screen and (max-width: 768px){
 .guest .box-1{
 	background-color: #fff;
@@ -417,7 +572,7 @@ line-height: 1.8;
 margin-bottom: 1rem;
 }
 .guest .box-1 .inner{
-padding: 0 1.8rem;
+padding: 0 7.1%;
 }
 .guest .box-1 img.image{
 margin: 5rem 0;

@@ -50,6 +50,11 @@ body {
   color: #222222;
   background-color: #fff;
   line-height: 1.9;
+  font-feature-settings: "palt";
+}
+
+.serif {
+  font-family: 'Noto Serif JP', serif;
 }
 
 h2 {
@@ -207,7 +212,7 @@ strong {
 
   .content {
     width: 100%;
-    padding: 0 2.4%;
+    padding: 0 3.4%;
   }
   strong {
     font-size: 120%;
@@ -272,8 +277,13 @@ strong {
     font-size: 1.5rem;
     margin: 1.5rem auto 1rem;
   }
+
+
+  /* =================================
+  information
+  ================================= */
   .infomation {
-    padding: 3rem 0 1rem;
+    padding: 0 0 1rem;
     font-size: 1.3rem;
   }
   .infomation ul {
