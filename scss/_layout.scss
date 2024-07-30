@@ -197,7 +197,7 @@ section 1
 
 	&__item {
 		font-weight: bold;
-		line-height: 2;
+		line-height: 1.75;
 		text-indent: -1em;
 		padding-left: 1em;
 		letter-spacing: -0.05em;
@@ -271,7 +271,7 @@ section 3
 ============================= */
 .section-3 {
 	.section-3__picture {
-		margin-bottom: 2rem;
+		margin-bottom: 2.7rem;
 	}
 	.box-1 {
 		margin-bottom: 4rem;
@@ -445,8 +445,12 @@ speaker
 		margin-bottom: 4.4rem;
 
     figure {
-        margin-bottom: .5rem;
+      margin-bottom: .5rem;
     }
+		
+		figcaption {
+			font-size: 1.4rem;
+		}
 
 		@media screen and (min-width: 769px){
 			grid-template-columns: repeat(6, 1fr);
@@ -459,6 +463,9 @@ speaker
 				&:nth-last-child(2) {
 					grid-column: 2/4;
 				}
+			}
+			figcaption {
+				font-size: 2rem;
 			}
 		}
 }
@@ -481,13 +488,14 @@ guest
 p {
 		font-size: 1.4rem;
 		text-align:justify;
+		letter-spacing: 0.05em;
 		&:not(:last-child) {
 			margin-bottom: 8rem;
 		}
 
 		@media screen and (min-width: 769px){
 			font-size: 1.6rem;
-			letter-spacing: .48px;
+			letter-spacing: .03em;
 			line-height: 2;
 			&:not(:last-child) {
 				margin-bottom: 10rem;
