@@ -1,8 +1,15 @@
 
 .content.c-youtube__box{
-	max-width: 800px!important;
+	max-width: 1040px!important;
 	margin-left: auto;
 	margin-right: auto;	
+	@media screen and (max-width: 1100px){
+		padding: 0 20px;		
+	}
+
+	@media screen and (max-width: 768px){
+    padding: 0 3.4%;
+  }
 }
 .c-youtube__wrap {
     aspect-ratio: 16/9;
@@ -22,10 +29,19 @@
 	&--top {
 		margin-left: auto;
 		margin-right: auto;
-		width: 94%;
-		max-width: 450px;
+		width: 88%;
+		max-width: 600px;
 		display: block;
 		filter: drop-shadow(3px 3px 2px rgba(0,0,0,1));
+		.button {
+			padding: 0;
+		}
+
+		.button {
+			img {
+				width: 100%;
+			}
+		}
 	}
 	&--min {
 		padding: 0 2.5rem 5rem;
@@ -37,6 +53,7 @@
 		padding-top: 4rem;
 		padding-bottom: 8rem;
 		gap: 2rem;
+		
 		&--min {
 			padding: 7rem 0 0;
 			margin-bottom: 9rem;
